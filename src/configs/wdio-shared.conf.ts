@@ -101,11 +101,8 @@ export const sharedConfig = {
     const browser = context.browser || global.browser;
 
     try {
-      // Limpiar localStorage
       await browser.execute(() => localStorage.clear());
-      // Limpiar sessionStorage
       await browser.execute(() => sessionStorage.clear());
-      // Limpiar cookies
       await browser.deleteAllCookies();
     } catch (e) {
       console.error('Error cleanning storage:', e);
@@ -137,11 +134,8 @@ export const sharedConfig = {
     const browser = context.browser || global.browser;
 
     try {
-      // Limpiar localStorage
       await browser.execute(() => localStorage.clear());
-      // Limpiar sessionStorage
       await browser.execute(() => sessionStorage.clear());
-      // Limpiar cookies
       await browser.deleteAllCookies();
     } catch (e) {
       console.error('Error cleanning storage:', e);
